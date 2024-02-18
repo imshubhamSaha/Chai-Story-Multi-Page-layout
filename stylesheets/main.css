@@ -143,7 +143,7 @@ HEADERS
 
 .header {
     min-height: 100vh;
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url("../assets/main-bcg.jpg") center/cover no-repeat fixed;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url("../assets/images/main-bcg.jpg") center/cover no-repeat fixed;
     position: relative;
 }
 
@@ -185,4 +185,21 @@ HEADERS
     padding: 1rem 1.75rem;
 }
 
+.content-divider {
+    height: 0.5rem;
+    background: linear-gradient(to left, var(--clr-primary),#e9b949,var(--clr-primary));
+}
 
+.icon-heart {
+    color: red;
+    font-size: 0.9rem;
+  }
+  .skill-flag {
+    display: inline-block;
+    position: relative;
+  }
+  .icon-flag {
+    width: 17px;
+    position: absolute;
+    transform: translate(0, -80%);
+  }
