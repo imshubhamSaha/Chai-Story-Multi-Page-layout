@@ -135,6 +135,13 @@ p{
     box-shadow: 0 1px 3px rgba(0,0,0,0.9);
 }
 
+.clearfix::after,
+.clearfix::before {
+    content: "" ;
+    clear: both;
+    display: table;
+}
+
 /* 
 =====================
 HEADERS
@@ -190,16 +197,82 @@ HEADERS
     background: linear-gradient(to left, var(--clr-primary),#e9b949,var(--clr-primary));
 }
 
+/* 
+=====================
+SKILLS
+=====================
+*/
+.skills {
+    background: var(--clr-grey-10);
+}
+
+.skill {
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+    display: inline-block;
+    color: var(--clr-primary);
+}
+
+.skill-title {
+    transition: var(--transition);
+}
+
+.skill-text {
+    color: var(--clr-grey-5);
+    max-width: 17rem;
+    margin: 0 auto;
+    transition: var(--transition);
+}
+
 .icon-heart {
     color: red;
     font-size: 0.9rem;
-  }
-  .skill-flag {
+}
+
+.skill-flag {
     display: inline-block;
     position: relative;
-  }
-  .icon-flag {
+}
+
+.icon-flag {
     width: 17px;
     position: absolute;
     transform: translate(0, -80%);
-  }
+}
+
+.skill:hover {
+    background: var(--clr-white);
+    box-shadow: 0 2px var(--clr-primary);
+}
+
+.skill:hover .skill-icon {
+    transform: translateY(-10px);
+}
+
+.skill:hover .skill-title {
+    /* transform: scale(1.01,1.01); */
+}
+
+.skill:hover .skill-text{
+    transform: translateY(5px);
+}
+
+@media screen and (min-width:576px) {
+    .skill {
+        float: left;
+        width: 50%;
+    }
+}
+@media screen and (min-width:1170px) {
+    .skill {
+        float: left;
+        width: 25%;
+    }
+}
