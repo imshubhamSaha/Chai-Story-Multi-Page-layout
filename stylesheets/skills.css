@@ -1,0 +1,75 @@
+.skills {
+    background: var(--clr-grey-10);
+}
+
+.skill {
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+    display: inline-block;
+    color: var(--clr-primary);
+}
+
+.skill-title {
+    transition: var(--transition);
+}
+
+.skill-text {
+    color: var(--clr-grey-5);
+    max-width: 17rem;
+    margin: 0 auto;
+    transition: var(--transition);
+}
+
+.icon-heart {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.skill-flag {
+    display: inline-block;
+    position: relative;
+}
+
+.icon-flag {
+    width: 17px;
+    position: absolute;
+    transform: translate(0, -80%);
+}
+
+.skill:hover {
+    background: var(--clr-white);
+    box-shadow: 0 2px var(--clr-primary);
+}
+
+.skill:hover .skill-icon {
+    transform: translateY(-7px);
+}
+
+.skill:hover .skill-title {
+    transform: scale(1.1);
+}
+
+.skill:hover .skill-text{
+    transform: translateY(5px);
+}
+
+@media screen and (min-width:576px) {
+    .skill {
+        float: left;
+        width: 50%;
+    }
+}
+@media screen and (min-width:1200px) {
+    .skill {
+        float: left;
+        width: 25%;
+    }
+}

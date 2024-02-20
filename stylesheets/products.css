@@ -1,0 +1,88 @@
+.products {
+    background: var(--clr-grey-10);
+}
+
+.products article {
+    padding: 2rem 0;
+}
+
+.product-text {
+    color: var(--clr-grey-5);
+    max-width: 30rem;
+}
+
+.product-container {
+    margin-bottom: 2rem;
+    transition: var(--transition);
+}
+
+
+.product-container:hover {
+    transform: translateY(-5px);
+}
+
+.product-picture-container {
+    background:url("../assets/images/Products/black-ginger-ing.webp") center/cover;
+    border-radius: var(--radius);
+}
+.custom-tea {
+    background:url("../assets/images/Products/mango\ mint\ ing.webp") center/cover;
+}
+
+.product-img{
+    background: var(--clr-primary);
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    height: 17rem;
+    object-fit: cover;
+    transition: all 350ms linear;
+}
+
+.product-picture-container:hover .product-img{
+    opacity: 0;
+}
+
+.product-price {
+    color: var(--clr-primary);
+}
+
+@media screen and (min-width:564px) {
+    .product-container {
+        float: left;
+        width: 50%;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width:798px) {
+    .product-container {
+        width: 33.3%;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .product-container {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .product-info {
+        float: left;
+        width: 33%;
+        margin-right:1rem;
+    }
+    .product-inventory {
+        float: left;
+        width: 65%;
+    }
+    
+    .product-container {
+        margin-bottom: 0;
+        padding: 0 0.5rem;
+        padding-top: 5.5rem;
+    }
+   .product-title {
+        font-size: .8rem;
+   }
+}
