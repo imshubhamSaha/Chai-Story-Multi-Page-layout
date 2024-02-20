@@ -370,9 +370,10 @@ PRODUCTS
     margin-bottom: 2rem;
     height: 17rem;
     object-fit: cover;
+    transition: all 350ms linear;
 }
 
-.product-img:hover {
+.product-picture-container:hover .product-img{
     opacity: 0;
 }
 
