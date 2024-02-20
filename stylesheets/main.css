@@ -7,16 +7,6 @@ FONTS
 
 /* 
 =====================
-Css-File
-=====================
-*/
-@import "./about.css";
-@import "./skills.css";
-@import "./products.css";
-@import "./services.css";
-
-/* 
-=====================
 VARIABLES- GLOBAL
 =====================
 */
@@ -367,7 +357,6 @@ PRODUCTS
 .product-picture-container {
     background:url("../assets/images/Products/black-ginger-ing.webp") center/cover;
     border-radius: var(--radius);
-    transition: var(--transition);
 }
 .custom-tea {
     background:url("../assets/images/Products/mango\ mint\ ing.webp") center/cover;
@@ -379,9 +368,10 @@ PRODUCTS
     margin-bottom: 2rem;
     height: 17rem;
     object-fit: cover;
+    transition:all 360ms linear;
 }
 
-.product-img:hover {
+.product-picture-container:hover .product-img {
     opacity: 0;
 }
 
