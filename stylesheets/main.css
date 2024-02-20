@@ -7,10 +7,19 @@ FONTS
 
 /* 
 =====================
+Css-File
+=====================
+*/
+@import "./about.css";
+@import "./skills.css";
+@import "./products.css";
+@import "./services.css";
+
+/* 
+=====================
 VARIABLES- GLOBAL
 =====================
 */
-
 :root {
     --clr-primary:#239B56;
     --clr-primary-light:#58D68D;
@@ -370,10 +379,9 @@ PRODUCTS
     margin-bottom: 2rem;
     height: 17rem;
     object-fit: cover;
-    transition: all 350ms linear;
 }
 
-.product-picture-container:hover .product-img{
+.product-img:hover {
     opacity: 0;
 }
 
