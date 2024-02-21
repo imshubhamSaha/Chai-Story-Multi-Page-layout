@@ -157,6 +157,85 @@ label {
 }
 /* 
 =====================
+NAVBAR
+=====================
+*/
+.nav-btn {
+    position: fixed;
+    top: 3%;
+    left: 5%;
+    font-size: 2.5rem;
+    color: var(--clr-primary);
+    z-index: 1;
+    cursor: pointer;
+    animation: bounce 2s ease infinite;
+}
+
+.navbar {
+    position: fixed;
+    background: var(--clr-grey-10);
+    inset:0;
+    box-shadow: 2px 0 2px rgba(0,0,0,0.2);
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: var(--transition);
+}
+.show-nav {
+    transform: translate(0);
+}
+.navbar-header {
+    text-align: right;
+    padding-right:1rem ;
+}
+
+.nav-close {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #f29c9c;
+    transition: var(--transition);
+}
+.nav-close:hover {
+    color: #bb2525;
+}
+.nav-link {
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: var(--spacing);
+    padding: 0.25rem 1rem;
+    text-transform: capitalize;
+    transition: var(--transition);
+    color: var(--clr-grey-5);
+}
+.nav-link:hover {
+    background: var(--clr-primary-light);
+    color: var(--clr-primary);
+    padding-left: 1.5rem;
+    border-left: 0.25rem solid var(--clr-primary);
+}
+
+@media screen and (min-width:768px) {
+    .navbar {
+        width: 25vw;
+        max-width: 20rem;
+    }
+}
+
+/* Animation  nav- btn */
+
+ @keyframes bounce {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+ }
+
+/* 
+=====================
 HEADERS
 =====================
 */
@@ -165,6 +244,7 @@ HEADERS
     min-height: 100vh;
     background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url("../assets/images/backgrounds/main-bcg.jpg") center/cover no-repeat fixed;
     position: relative;
+    overflow: hidden;
 }
 
 .banner {
@@ -178,6 +258,7 @@ HEADERS
 .banner h2 {
     font-family: var(--ff-secondary);
     color: var(--clr-primary);
+    animation: showFromLeft 5s ease-in-out 1;
 }
 
 .banner h1 {
@@ -186,11 +267,14 @@ HEADERS
     font-size: 2.5rem;
     margin-top: 1.25rem;
     margin-bottom: 2rem;
+    animation: showFromRight 5s ease-in-out 1;
+
 }
 .sub-heading {
     text-transform: capitalize;
     font-family: var(--ff-secondary);
     color: var(--clr-primary);
+    animation: opac 5s ease-in-out 1;
 }
 
 .mid-sub-heading {
@@ -203,11 +287,78 @@ HEADERS
     outline-offset: .25rem;
     font-size: 1.25rem;
     padding: 1rem 1.75rem;
+    animation: btnEffect 5s linear 1;
 }
 
 .content-divider {
     height: 0.5rem;
     background: linear-gradient(to left, var(--clr-primary),#e9b949,var(--clr-primary));
+}
+
+/* Animations */
+@keyframes showFromLeft {
+    0%{
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-200px);
+        opacity: 0.5;
+    }
+    75%{
+        transform: translateX(100px);
+        opacity: 0.75;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+@keyframes showFromRight {
+    0%{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(200px);
+        opacity: 0.5;
+    }
+    75%{
+        transform: translateX(-100px);
+        opacity: 0.75;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+@keyframes opac {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes btnEffect {
+    0%{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(2);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* 
