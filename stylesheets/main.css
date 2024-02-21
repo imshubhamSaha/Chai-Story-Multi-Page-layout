@@ -146,6 +146,15 @@ p{
         padding: 4rem 1rem;
     }
 }
+
+input, select, textarea {
+    text-transform: capitalize;
+    border-radius: var(--radius);    
+}
+
+label {
+    display:inline-block;
+}
 /* 
 =====================
 HEADERS
@@ -573,19 +582,53 @@ CONTACT
     font-family: var(--ff-secondary);
     padding-top:1.25rem ;
 }
-select {
-    text-transform: uppercase;
-}
+
 .form-group {
     padding: 1rem 1.75rem;
 }
 
+.form-label {
+   float: left;
+   width:20%;
+   margin-top: 0.75rem;
+   text-transform: capitalize;
+   color: var(--clr-grey-5);
+   font-weight: 700;
+}
+.form-input {
+    float: left;
+    width: 80%;
+    margin-top: 0.75rem;
+    color: var(--clr-grey-10);
+}
+
 .form-control {
-    display: inline-block;
-    width:70%;
+    width:100%;
     background: var(--clr-grey-10);
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     border: none;
+  
+}
+
+.form-control::placeholder {
+    font-family: var(--ff-primary);
+    color: var(--clr-grey-1);
+    text-transform: capitalize;
+}
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 0.875rem;
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+}
+
+@media screen and (min-width:992px) {
+    .contact-info, .contact-form {
+        float: left;
+        width: 50%;
+    }
+    
 }
 
 

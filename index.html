@@ -411,68 +411,83 @@
           <h3>contact us</h3>
           <form>
             <!-- input-group -->
-            <div class="form-group clearfix">
+            <div class="form-group">
               <!-- inputs -->
-              <div class="form-label">
-                <label for="name">name</label>
+              <div class="row clearfix">
+                <div class="form-label">
+                  <label for="name">name</label>
+                </div>
+                <div class="form-input">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="name"
+                    required
+                  />
+                </div>
               </div>
-              <div class="form-input">
-                <input
-                  type="text"
-                  name="name"
-                  class="form-control"
-                  id="name"
-                  placeholder="name"
-                  required
-                />
+              <!-- inputs -->
+              <div class="row clearfix">
+                <div class="form-label">
+                  <label for="email">e-mail</label>
+                </div>
+                <div class="form-input">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="email"
+                    required
+                  />
+                </div>
               </div>
-              <div class="form-label">
-                <label for="email">E-mail</label>
+              <!-- inputs -->
+              <div class="row clearfix">
+                <div class="form-label">
+                  <label for="phone">contact</label>
+                </div>
+                <div class="form-input">
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    class="form-control"
+                    placeholder="contact number"
+                    required
+                  />
+                </div>
               </div>
-              <div class="form-input">
-                <input
-                  type="email"
-                  placeholder="email"
-                  name="email"
-                  class="form-control"
-                  id="email"
-                  required
-                />
+              <!-- inputs -->
+              <div class="row clearfix">
+                <div class="form-label">
+                  <label for="query">query</label>
+                </div>
+                <div class="form-input">
+                  <select name="query" id="query" class="form-control">
+                    <option value="suggestion">suggestion</option>
+                    <option value="complaint">compliant</option>
+                    <option value="enquiry">enquiry</option>
+                  </select>
+                </div>
               </div>
-              <div class="form-label">
-                <label for="phone">contact</label>
-              </div>
-              <div class="form-input">
-                <input
-                  type="text"
-                  name="phone"
-                  placeholder="contact number"
-                  id="phone"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <div class="form-label">
-                <label for="query">Query</label>
-              </div>
-              <div class="form-input">
-                <select name="query" id="query" class="form-control">
-                  <option value="suggestion">suggestion</option>
-                  <option value="complain">complain</option>
-                  <option value="enquiry">enquiry</option>
-                </select>
-              </div>
-              <div class="form-label">
-                <label for="message">Message</label>
-              </div>
-              <div class="form-input">
-                <textarea
-                  name="message"
-                  id="message"
-                  class="form-control"
-                  placeholder="write message"
-                  required
-                ></textarea>
+              <!-- inputs -->
+              <div class="row clearfix">
+                <div class="form-label">
+                  <label for="message">message</label>
+                </div>
+                <div class="form-input">
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="5"
+                    class="form-control"
+                    placeholder="your message"
+                    required
+                  ></textarea>
+                </div>
               </div>
             </div>
             <!-- submit button -->
