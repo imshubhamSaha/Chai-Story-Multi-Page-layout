@@ -148,7 +148,6 @@ p{
 }
 
 input, select, textarea {
-    text-transform: capitalize;
     border-radius: var(--radius);    
 }
 
@@ -764,7 +763,7 @@ CONTACT
 .form-control::placeholder {
     font-family: var(--ff-primary);
     color: var(--clr-grey-1);
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 .submit-btn {
     display: block;
