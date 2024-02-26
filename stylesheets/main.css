@@ -5,6 +5,8 @@ FONTS
 */
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Grand+Hotel&display=swap');
 
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+
 /* 
 =====================
 VARIABLES- GLOBAL
@@ -395,21 +397,6 @@ SKILLS
     transition: var(--transition);
 }
 
-.icon-heart {
-    color: red;
-    font-size: 0.9rem;
-}
-
-.skill-flag {
-    display: inline-block;
-    position: relative;
-}
-
-.icon-flag {
-    width: 17px;
-    position: absolute;
-    transform: translate(0, -80%);
-}
 
 .skill:hover {
     background: var(--clr-white);
@@ -489,30 +476,23 @@ ABOUT
 PRODUCTS
 =====================
 */
-
 .products {
     background: var(--clr-grey-10);
 }
-
 .products article {
     padding: 2rem 0;
 }
-
 .product-text {
     color: var(--clr-grey-5);
     max-width: 30rem;
 }
-
 .product-container {
     margin-bottom: 2rem;
     transition: var(--transition);
 }
-
-
 .product-container:hover {
     transform: translateY(-5px);
 }
-
 .product-picture-container {
     background:url("../assets/images/Products/black-ginger-ing.webp") center/cover;
     border-radius: var(--radius);
@@ -520,7 +500,6 @@ PRODUCTS
 .custom-tea {
     background:url("../assets/images/Products/mango\ mint\ ing.webp") center/cover;
 }
-
 .product-img{
     background: var(--clr-primary);
     border-radius: var(--radius);
@@ -529,11 +508,9 @@ PRODUCTS
     object-fit: cover;
     transition:all 360ms linear;
 }
-
 .product-picture-container:hover .product-img {
     opacity: 0;
 }
-
 .product-price {
     color: var(--clr-primary);
 }
@@ -789,6 +766,7 @@ FOOTER
 footer {
     background: #222;
     text-align: center;
+    position: relative;
 }
 
 .social-icon {
@@ -814,7 +792,73 @@ footer {
     color: var(--clr-primary);
 }
 
+.icon-heart {
+    color: red;
+    font-size: 0.9rem;
+}
 
+.footer-flag {
+    display: inline-block;
+    position: relative;
+}
+.icon-flag {
+    width: 17px;
+    position: absolute;
+    transform: translate(0, -80%);
+}
+
+#button {
+    display: inline-block;
+    background-color:  #FF9800;
+    width: 3rem;
+    height: 2rem;
+    text-align: center;
+    border-radius:var(--radius);
+    position: absolute;
+    transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+    /* opacity: 0;
+    visibility: hidden; */
+  }
+  #button span {
+    color: #fff;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding-top: 0.25rem;
+    animation: bounceButton 2s linear infinite;
+  }
+
+  @keyframes bounceButton {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+  }
+
+  @media screen and (min-width:992px) {
+    #button {
+        left: 90%;
+        top :60%;
+    }
+  }
+ 
+  #button:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
 
 
 
