@@ -5,7 +5,6 @@ FONTS
 */
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Grand+Hotel&display=swap');
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 
 /* 
 =====================
@@ -188,7 +187,6 @@ NAVBAR
     text-align: right;
     padding-right:1rem ;
 }
-
 .nav-close {
     font-size: 2.5rem;
     cursor: pointer;
@@ -807,27 +805,36 @@ footer {
     transform: translate(0, -80%);
 }
 
+/* 
+=====================
+BACK TO TOP
+=====================
+*/
 #button {
     display: inline-block;
-    background-color:  #FF9800;
-    width: 3rem;
-    height: 2rem;
-    text-align: center;
-    border-radius:var(--radius);
-    position: absolute;
-    transition: background-color .3s, 
-    opacity .5s, visibility .5s;
-    /* opacity: 0;
-    visibility: hidden; */
-  }
-  #button span {
+    transition: background-color .3s,opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden  ;
+    -webkit-transition: background-color .3s,opacity .5s, visibility .5s;
+    -moz-transition: background-color .3s,opacity .5s, visibility .5s;
+    -ms-transition: background-color .3s,opacity .5s, visibility .5s;
+    -o-transition: background-color .3s,opacity .5s, visibility .5s;
+}
+  .btn-cursor {
     color: #fff;
-    font-size: 1.2rem;
+    font-size:  2rem;
     display: inline-block;
     padding-top: 0.25rem;
     animation: bounceButton 2s linear infinite;
+    overflow: hidden;
   }
+  .top-text {
+    display: block;
+    overflow: hidden;
+    color: #fff;
+    font-size: 1.2rem;
 
+  }
   @keyframes bounceButton {
     0%{
         transform: scale(1);
@@ -842,18 +849,30 @@ footer {
 
   @media screen and (min-width:992px) {
     #button {
-        left: 90%;
-        top :60%;
+        background-color:  #FF9800;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        border-radius:var(--radius);
+        position: absolute;
+        top :50%;
+        right: 5%;
+    }
+    #button:hover {
+        background: #fff;
     }
   }
  
   #button:hover {
     cursor: pointer;
-    background-color: #333;
   }
-  #button:active {
-    background-color: #555;
+  #button:hover .btn-cursor {
+    color:var(--clr-primary)
   }
+  #button:active .btn-cursor{
+    color: var(--clr-primary-light);
+  }
+
   #button.show {
     opacity: 1;
     visibility: visible;
